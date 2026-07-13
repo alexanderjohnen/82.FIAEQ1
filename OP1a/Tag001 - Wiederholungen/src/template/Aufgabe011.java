@@ -2,7 +2,7 @@ package template;
 
 import java.util.Scanner;
 
-public class Aufgabe001
+public class Aufgabe011
 {
     /* Level 1
      * Schreiben Sie ein Java-Programm das kontrolliert, ob eine Zahl gerade oder ungerade ist
