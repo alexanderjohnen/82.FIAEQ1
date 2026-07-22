@@ -12,6 +12,8 @@
       <sourceFolder url="file://$MODULE_DIR$/OP1a/Tag000 - Testing/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OP1a/Tag007 - Klassen/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag001b - Enums/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag000b - Testing/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag002b - Assoziationen &amp; Kompositionen/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

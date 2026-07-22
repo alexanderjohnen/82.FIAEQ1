@@ -1,9 +1,8 @@
 package template;
 
 import java.util.Arrays;
-import java.util.LinkedList;
 
-public class Testing
+public class TestingObjectOrientedProgramming1a
 {
     public static void main(String... args) {
         int[] meinIntArray = {2, 1, 7, 3, 4, 9};

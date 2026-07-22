@@ -1,4 +1,4 @@
-package template;
+package Aufgaben;
 
 import java.util.Scanner;
 
