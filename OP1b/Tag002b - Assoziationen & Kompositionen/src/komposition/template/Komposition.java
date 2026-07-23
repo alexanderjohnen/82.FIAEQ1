@@ -10,6 +10,5 @@ public class Komposition {
         System.out.println("Raumnummern des Gebäudes: ");
         System.out.println(schule.getRaeume());
 
-
     }
 }
