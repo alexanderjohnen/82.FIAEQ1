@@ -41,7 +41,7 @@ public class Gebaeude {
 
     public void addRaum(int raumNummer){
         // Das Gebäude erzeugt den Raum SELBST und behält ihn in seiner Liste.
-        raumListe.add(new Raum(raumNummer,this));
+        raumListe.add(new Raum(raumNummer, this));
     }
 
     // Jedes Gebäude braucht mindestens einen RAUM.
