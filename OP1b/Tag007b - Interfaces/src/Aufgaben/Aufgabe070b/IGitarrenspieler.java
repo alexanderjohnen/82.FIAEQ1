@@ -1,4 +1,4 @@
-package Aufgaben.Aufgaben070b;
+package Aufgaben.Aufgabe070b;
 
 public interface IGitarrenspieler
 {

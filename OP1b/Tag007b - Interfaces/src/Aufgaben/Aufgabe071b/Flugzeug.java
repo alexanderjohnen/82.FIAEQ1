@@ -1,6 +1,4 @@
-package Aufgaben.Aufgaben071b;
-
-import java.util.List;
+package Aufgaben.Aufgabe071b;
 
 public class Flugzeug extends Fahrzeug implements Fahrbar
 {

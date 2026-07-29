@@ -1,4 +1,4 @@
-package Aufgaben.Aufgaben071b;
+package Aufgaben.Aufgabe071b;
 
 public interface Schwimmfähig
 {

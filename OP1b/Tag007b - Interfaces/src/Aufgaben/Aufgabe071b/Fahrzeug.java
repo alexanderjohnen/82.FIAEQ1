@@ -1,4 +1,4 @@
-package Aufgaben.Aufgaben071b;
+package Aufgaben.Aufgabe071b;
 
 import java.util.ArrayList;
 import java.util.List;

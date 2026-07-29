@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag003b - Vererbung/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag006b - Abstrakte Klassen/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag007b - Interfaces/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/OP1b/Tag008b - SOLID/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
