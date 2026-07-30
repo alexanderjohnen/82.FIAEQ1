@@ -5,12 +5,12 @@ public class Fahrer implements TankfuellstandBeobachter
     @Override
     public void onTankfüllstandNiedrig(PKW pkw)
     {
-        if (pkw.getTankfuellstandLeuchte() == TankfuellstandLeuchte.Gelb)
+        if (pkw.getTankfuellstandLeuchte() == TankfuellstandLeuchte.GELB)
         {
             System.out.println("Ach, hat noch Zeit...");
         }
 
-        if (pkw.getTankfuellstandLeuchte() == TankfuellstandLeuchte.Rot)
+        if (pkw.getTankfuellstandLeuchte() == TankfuellstandLeuchte.ROT)
         {
             System.out.println("Jetzt aber dringend tanken...");
             tanken(pkw);

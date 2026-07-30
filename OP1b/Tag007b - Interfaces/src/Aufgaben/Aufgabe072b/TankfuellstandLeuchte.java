@@ -2,12 +2,8 @@ package Aufgaben.Aufgabe072b;
 
 public enum TankfuellstandLeuchte
 {
-    Gruen(),
-    Gelb(),
-    Rot();
+    GRUEN(),
+    GELB(),
+    ROT();
 
-    private TankfuellstandLeuchte()
-    {
-
-    }
 }

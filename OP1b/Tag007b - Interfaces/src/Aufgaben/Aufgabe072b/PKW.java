@@ -3,19 +3,12 @@ package Aufgaben.Aufgabe072b;
 public class PKW
 {
     private int tankfuellstand;
-    private TankfuellstandLeuchte tankfuellstandLeuchte = TankfuellstandLeuchte.Rot;
+    private TankfuellstandLeuchte tankfuellstandLeuchte = TankfuellstandLeuchte.ROT;
     public TankfuellstandBeobachter tankfüllstandBeobachter;
 
     public PKW(int tankfuellstand)
     {
         this.tankfuellstand = tankfuellstand;
-        if (this.tankfuellstand >= 15)
-        {
-            this.tankfuellstandLeuchte = TankfuellstandLeuchte.Gruen;
-        } else if (this.tankfuellstand >= 10)
-        {
-            this.tankfuellstandLeuchte = TankfuellstandLeuchte.Gelb;
-        }
     }
 
     public int getTankfuellstand()
@@ -34,28 +27,32 @@ public class PKW
         System.out.println("Wird aufgetankt.");
 
         if (tankfuellstand >= 15)
-            tankfuellstandLeuchte = TankfuellstandLeuchte.Gruen;
+            tankfuellstandLeuchte = TankfuellstandLeuchte.GRUEN;
 
     }
 
-    public void fahren()
+    public void fahren() throws InterruptedException
     {
         while (tankfuellstand > 0)
         {
             System.out.println("Brumm...");
 
-            if (tankfuellstand < 10)
-            {
-                tankfuellstandLeuchte = TankfuellstandLeuchte.Rot;
-                tankfüllstandBeobachter.onTankfüllstandNiedrig(this);
-            }
-            else if (tankfuellstand <= 15)
-            {
-                tankfuellstandLeuchte = TankfuellstandLeuchte.Gelb;
-                tankfüllstandBeobachter.onTankfüllstandNiedrig(this);
-            }
+            Thread.sleep(1500);
 
             tankfuellstand--;
+
+            if (tankfuellstand < 10)
+            {
+                tankfuellstandLeuchte = TankfuellstandLeuchte.ROT;
+                System.out.println("Die Tankleuchte blinkt rot");
+                tankfüllstandBeobachter.onTankfüllstandNiedrig(this);
+            }
+            else if (tankfuellstand < 15)
+            {
+                tankfuellstandLeuchte = TankfuellstandLeuchte.GELB;
+                System.out.println("Die Tankleuchte blinkt gelb.");
+                tankfüllstandBeobachter.onTankfüllstandNiedrig(this);
+            }
         }
     }
 }
