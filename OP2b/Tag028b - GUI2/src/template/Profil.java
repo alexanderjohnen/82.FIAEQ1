@@ -17,10 +17,10 @@ public class Profil
         JPanel panel = new JPanel();
         panel.setLayout(new GridLayout(12,1,10,10));
 
-        vornameEingabe = addInput(panel,"Vorname");
+        vornameEingabe = addInput(panel,"Vorname", 'V', " (Alt + V)", "Vorname", "Bitte hier Ihren Vornamen eingeben");
         showName(panel, "Vorname", vornameEingabe);
-        nachnameEingabe = addInput(panel,"Nachname");
-        showName(panel, "Vorname", nachnameEingabe);
+        nachnameEingabe = addInput(panel,"Nachname", 'N', " (Alt + N)", "Nachname", "Bitte hier Ihren Nachnamen eingeben");
+        showName(panel, "Nachname", nachnameEingabe);
 
         JPanel outerPanel = new JPanel();
         outerPanel.add(panel);
@@ -34,18 +34,28 @@ public class Profil
         frame.setVisible(true);
     }
 
-    private JTextField addInput (JPanel panel, String fieldType)
+    private JTextField addInput (JPanel panel, String fieldType, char setMnemonic, String Kuerzel, String fieldName, String fieldContext )
     {
         JLabel nameLabel = new JLabel("Geben Sie Ihren " + fieldType + "n ein:");
         panel.add(nameLabel);
 
         JTextField nameEingabe = new JTextField(10);
         panel.add(nameEingabe);
+        nameLabel.setLabelFor(nameEingabe);
+        nameEingabe.getAccessibleContext().setAccessibleName(fieldName);
+        nameEingabe.getAccessibleContext().setAccessibleDescription(fieldContext);
 
-        JButton nameConfirm = new JButton("Speichern");
+        JButton nameConfirm = new JButton("Speichern" + Kuerzel);
         panel.add(nameConfirm);
+        nameConfirm.setMnemonic(setMnemonic);
+        nameEingabe.addActionListener(e -> nameConfirm.doClick());
 
-        JLabel nameSaved = new JLabel();
+        int index = nameConfirm.getText().indexOf(setMnemonic);
+        if (index != -1) {
+            nameConfirm.setDisplayedMnemonicIndex(index);
+        }
+
+        JLabel nameSaved = new JLabel("---------------------------------------------");
         panel.add(nameSaved);
 
         nameConfirm.addActionListener(e ->
@@ -66,7 +76,7 @@ public class Profil
         JButton showNameButton = new JButton("Zeige " + fieldtype + " an");
         panel.add(showNameButton);
 
-        JLabel showNameLabel = new JLabel();
+        JLabel showNameLabel = new JLabel("---------------------------------------------");
         panel.add(showNameLabel);
 
         showNameButton.addActionListener(e -> {
